@@ -25,17 +25,17 @@ for (const topping of toppings) {
 
 
 document.getElementById("zapatos").addEventListener("click", () => {
-    document.body.style.backgroundImage = "url('imagenes/zapatos.png')";
+    document.body.style.backgroundImage = "url('Imagenes/zapatos.png')";
 });
 
 document.getElementById("camisas").addEventListener("click", () => {
-    document.body.style.backgroundImage = "url('imagenes/camisas.png')";
+    document.body.style.backgroundImage = "url('Imagenes/camisas.png')";
 });
 
 document.getElementById("blusas").addEventListener("click", () => {
-    document.body.style.backgroundImage = "url('imagenes/blusas.png')";
+    document.body.style.backgroundImage = "url('Imagenes/blusas.png')";
 });
 
 document.getElementById("pantalones").addEventListener("click", () => {
-    document.body.style.backgroundImage = "url('imagenes/pantalones.png')";
+    document.body.style.backgroundImage = "url('Imagenes/pantalones.png')";
 });
