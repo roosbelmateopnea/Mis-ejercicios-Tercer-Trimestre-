@@ -35,12 +35,10 @@ function agregarTarea() {
         modificar.classList.add('bi','bi-pencil-square','icono-modificar');
         modificar.addEventListener('click', modificarTarea); 
 
-
-
-
         iconos.append(completar,eliminar,modificar);
 
         listaDeTarea.appendChild(tareaNueva);
+        limpiarCampo();
 
     } else{
         alert('Por Favor ingresa una Tarea.');
@@ -51,7 +49,14 @@ function agregarTarea() {
 function completarTarea(e){
     let tarea = e.target.parentNode.parentNode;
     tarea.classList.toggle('completada');
+    limpiarCampo();
 }
+
+function limpiarCampo() {
+    const inputTexto = document.getElementById("ingresar-tarea");
+    inputTexto.value = ""; 
+}
+
 
 
 function eliminarTarea(e){
@@ -65,6 +70,7 @@ boton.addEventListener('click',agregarTarea);
 input.addEventListener('keydown',(e) => {
     if(e.key == 'Enter'){
         agregarTarea();
+        limpiarCampo();
     }
 
 })
@@ -81,9 +87,7 @@ function contadorLista() {
 function modificarTarea(e) {
     let tarea = e.target.parentElement.parentElement;
     let texto = tarea.querySelector("p");
-
     let nuevoTexto = prompt("Editar tarea:", texto.innerText);
-
     if (nuevoTexto !== null && nuevoTexto.trim() !== "") {
         texto.innerText = nuevoTexto;
     }
